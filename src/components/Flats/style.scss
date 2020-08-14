@@ -3,7 +3,13 @@
     justify-content: center;
     flex-wrap: wrap;
 
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     .flat {
+        position: relative;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         max-width: 250px;
 
@@ -13,11 +19,34 @@
         border: 1px solid #e4e4e4;
         border-radius: 2px;
         text-align: left;
+        box-shadow: 0 0px 9px -3px gray;
 
         &__id {
             font-size: 0.8rem;
             color: gray;
             margin-bottom: 10px;
+        }
+
+        &__like {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+
+            svg {
+                path {
+                    fill: gray
+                }
+            }
+
+            &.active {
+                svg {
+                    path {
+                        fill: gold;
+                    }
+                }
+            }
         }
 
         &__title {
@@ -41,6 +70,38 @@
                 &:last-child {
                     padding-right: 0;
                     border-right: none;
+                }
+            }
+        }
+
+        &__rooms {
+            color: #2196f3;
+        }
+
+        &__address {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            line-height: 1.2;
+
+            svg {
+                margin-right: 5px;
+
+                path {
+                    fill: gray
+                }
+            }
+        }
+
+        &__agent {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            line-height: 1.2;
+
+            svg {
+                margin-right: 5px;
+
+                path {
+                    fill: gray
                 }
             }
         }
